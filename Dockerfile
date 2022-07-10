@@ -16,6 +16,7 @@ ARG group=ustreamer
 ARG uid=2000
 
 RUN adduser --uid=${uid} --disabled-password --gecos="" ${user}
+RUN adduser -m -g video ${user}
 
 USER ${uid}:${uid}
 WORKDIR $HOME
